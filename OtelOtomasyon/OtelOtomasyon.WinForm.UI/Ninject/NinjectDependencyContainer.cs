@@ -18,9 +18,6 @@ namespace OtelOtomasyon.WinForm.UI.Ninject
         public static IKernel RegisterDependency(IKernel kernel)
         {
             kernel.Bind<DbContext>().To<ProjectContext>();
-
-            kernel.Bind<IPersonelRepository>().To<PersonelRepository>();
-            kernel.Bind<IRoleRepository>().To<RoleRepository>();
             kernel.Bind<IUnitOfWork>().To<UnitOfWork>();
 
             return kernel;

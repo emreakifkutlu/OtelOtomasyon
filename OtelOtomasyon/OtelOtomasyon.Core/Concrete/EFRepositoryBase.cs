@@ -63,7 +63,7 @@ namespace OtelOtomasyon.Core.Concrete
 
         public IEnumerable<T> GetList()
         {
-            return _dbSet.AsEnumerable();
+            return _dbSet.ToList();
         }
 
         public T GetById(int id)
