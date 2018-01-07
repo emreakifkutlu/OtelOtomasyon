@@ -160,6 +160,7 @@
             this.bntGüncelle.TabIndex = 12;
             this.bntGüncelle.Text = "Güncelle";
             this.bntGüncelle.UseVisualStyleBackColor = true;
+            this.bntGüncelle.Click += new System.EventHandler(this.bntGüncelle_Click);
             // 
             // dgvOdalar
             // 
@@ -167,8 +168,10 @@
             this.dgvOdalar.Location = new System.Drawing.Point(352, 62);
             this.dgvOdalar.Name = "dgvOdalar";
             this.dgvOdalar.RowTemplate.Height = 24;
+            this.dgvOdalar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOdalar.Size = new System.Drawing.Size(490, 201);
             this.dgvOdalar.TabIndex = 13;
+            this.dgvOdalar.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvOdalar_CellMouseClick);
             // 
             // bntYeni
             // 
