@@ -170,11 +170,12 @@
             this.label79 = new System.Windows.Forms.Label();
             this.txtAdres = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtTelefon = new System.Windows.Forms.MaskedTextBox();
+            this.txtPlaka = new System.Windows.Forms.TextBox();
             this.txtCheckIn = new System.Windows.Forms.TextBox();
             this.label85 = new System.Windows.Forms.Label();
             this.label84 = new System.Windows.Forms.Label();
             this.pbKimlikDogrula = new System.Windows.Forms.PictureBox();
-            this.txtTelefon = new System.Windows.Forms.MaskedTextBox();
             this.label70 = new System.Windows.Forms.Label();
             this.label80 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -187,6 +188,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lblBosOdaSayisi = new System.Windows.Forms.Label();
+            this.lblOdaSayisi = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
             this.label81 = new System.Windows.Forms.Label();
@@ -195,7 +198,6 @@
             this.lbSonHareketler = new System.Windows.Forms.ListBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.txtPlaka = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
@@ -270,7 +272,7 @@
             this.dtpTarih.Font = new System.Drawing.Font("Arial", 10F);
             this.dtpTarih.Location = new System.Drawing.Point(0, 0);
             this.dtpTarih.Name = "dtpTarih";
-            this.dtpTarih.Size = new System.Drawing.Size(1264, 23);
+            this.dtpTarih.Size = new System.Drawing.Size(1264, 27);
             this.dtpTarih.TabIndex = 0;
             this.toolTip1.SetToolTip(this.dtpTarih, "Seçilen tarihteki otel doluluk durumunu gösterir.");
             // 
@@ -438,7 +440,7 @@
             // 
             // btn4801
             // 
-            this.btn4801.BackColor = System.Drawing.Color.Silver;
+            this.btn4801.BackColor = System.Drawing.Color.Lime;
             this.btn4801.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4801.FlatAppearance.BorderSize = 0;
             this.btn4801.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -449,10 +451,11 @@
             this.btn4801.TabIndex = 13;
             this.btn4801.Text = "BOŞ";
             this.btn4801.UseVisualStyleBackColor = false;
+            this.btn4801.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // btn4701
             // 
-            this.btn4701.BackColor = System.Drawing.Color.Silver;
+            this.btn4701.BackColor = System.Drawing.Color.Lime;
             this.btn4701.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4701.FlatAppearance.BorderSize = 0;
             this.btn4701.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -463,10 +466,11 @@
             this.btn4701.TabIndex = 13;
             this.btn4701.Text = "BOŞ";
             this.btn4701.UseVisualStyleBackColor = false;
+            this.btn4701.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // btn4601
             // 
-            this.btn4601.BackColor = System.Drawing.Color.Silver;
+            this.btn4601.BackColor = System.Drawing.Color.Lime;
             this.btn4601.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4601.FlatAppearance.BorderSize = 0;
             this.btn4601.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -477,10 +481,11 @@
             this.btn4601.TabIndex = 13;
             this.btn4601.Text = "BOŞ";
             this.btn4601.UseVisualStyleBackColor = false;
+            this.btn4601.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // btn4501
             // 
-            this.btn4501.BackColor = System.Drawing.Color.Silver;
+            this.btn4501.BackColor = System.Drawing.Color.Lime;
             this.btn4501.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4501.FlatAppearance.BorderSize = 0;
             this.btn4501.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -491,10 +496,11 @@
             this.btn4501.TabIndex = 13;
             this.btn4501.Text = "BOŞ";
             this.btn4501.UseVisualStyleBackColor = false;
+            this.btn4501.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // btn4401
             // 
-            this.btn4401.BackColor = System.Drawing.Color.Silver;
+            this.btn4401.BackColor = System.Drawing.Color.Lime;
             this.btn4401.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4401.FlatAppearance.BorderSize = 0;
             this.btn4401.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -505,10 +511,11 @@
             this.btn4401.TabIndex = 13;
             this.btn4401.Text = "BOŞ";
             this.btn4401.UseVisualStyleBackColor = false;
+            this.btn4401.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // btn4301
             // 
-            this.btn4301.BackColor = System.Drawing.Color.Silver;
+            this.btn4301.BackColor = System.Drawing.Color.Lime;
             this.btn4301.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4301.FlatAppearance.BorderSize = 0;
             this.btn4301.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -519,10 +526,11 @@
             this.btn4301.TabIndex = 13;
             this.btn4301.Text = "BOŞ";
             this.btn4301.UseVisualStyleBackColor = false;
+            this.btn4301.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // btn4201
             // 
-            this.btn4201.BackColor = System.Drawing.Color.Silver;
+            this.btn4201.BackColor = System.Drawing.Color.Lime;
             this.btn4201.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4201.FlatAppearance.BorderSize = 0;
             this.btn4201.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -533,10 +541,11 @@
             this.btn4201.TabIndex = 13;
             this.btn4201.Text = "BOŞ";
             this.btn4201.UseVisualStyleBackColor = false;
+            this.btn4201.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // btn4101
             // 
-            this.btn4101.BackColor = System.Drawing.Color.Silver;
+            this.btn4101.BackColor = System.Drawing.Color.Lime;
             this.btn4101.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4101.FlatAppearance.BorderSize = 0;
             this.btn4101.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -547,6 +556,7 @@
             this.btn4101.TabIndex = 13;
             this.btn4101.Text = "BOŞ";
             this.btn4101.UseVisualStyleBackColor = false;
+            this.btn4101.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // tabControl1
             // 
@@ -559,10 +569,10 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 71);
+            this.tabPage2.Size = new System.Drawing.Size(192, 68);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -735,7 +745,7 @@
             // 
             // btn3801
             // 
-            this.btn3801.BackColor = System.Drawing.Color.Silver;
+            this.btn3801.BackColor = System.Drawing.Color.Lime;
             this.btn3801.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3801.FlatAppearance.BorderSize = 0;
             this.btn3801.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -746,6 +756,7 @@
             this.btn3801.TabIndex = 13;
             this.btn3801.Text = "BOŞ";
             this.btn3801.UseVisualStyleBackColor = false;
+            this.btn3801.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // pictureBox10
             // 
@@ -805,7 +816,7 @@
             // 
             // btn3701
             // 
-            this.btn3701.BackColor = System.Drawing.Color.Silver;
+            this.btn3701.BackColor = System.Drawing.Color.Lime;
             this.btn3701.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3701.FlatAppearance.BorderSize = 0;
             this.btn3701.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -816,6 +827,7 @@
             this.btn3701.TabIndex = 13;
             this.btn3701.Text = "BOŞ";
             this.btn3701.UseVisualStyleBackColor = false;
+            this.btn3701.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // pictureBox27
             // 
@@ -853,7 +865,7 @@
             // 
             // btn3601
             // 
-            this.btn3601.BackColor = System.Drawing.Color.Silver;
+            this.btn3601.BackColor = System.Drawing.Color.Lime;
             this.btn3601.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3601.FlatAppearance.BorderSize = 0;
             this.btn3601.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -864,10 +876,11 @@
             this.btn3601.TabIndex = 13;
             this.btn3601.Text = "BOŞ";
             this.btn3601.UseVisualStyleBackColor = false;
+            this.btn3601.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // btn3501
             // 
-            this.btn3501.BackColor = System.Drawing.Color.Silver;
+            this.btn3501.BackColor = System.Drawing.Color.Lime;
             this.btn3501.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3501.FlatAppearance.BorderSize = 0;
             this.btn3501.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -878,6 +891,7 @@
             this.btn3501.TabIndex = 13;
             this.btn3501.Text = "BOŞ";
             this.btn3501.UseVisualStyleBackColor = false;
+            this.btn3501.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // label26
             // 
@@ -893,7 +907,7 @@
             // 
             // btn3401
             // 
-            this.btn3401.BackColor = System.Drawing.Color.Silver;
+            this.btn3401.BackColor = System.Drawing.Color.Lime;
             this.btn3401.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3401.FlatAppearance.BorderSize = 0;
             this.btn3401.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -904,6 +918,7 @@
             this.btn3401.TabIndex = 13;
             this.btn3401.Text = "BOŞ";
             this.btn3401.UseVisualStyleBackColor = false;
+            this.btn3401.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // label27
             // 
@@ -919,7 +934,7 @@
             // 
             // btn3301
             // 
-            this.btn3301.BackColor = System.Drawing.Color.Silver;
+            this.btn3301.BackColor = System.Drawing.Color.Lime;
             this.btn3301.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3301.FlatAppearance.BorderSize = 0;
             this.btn3301.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -930,6 +945,7 @@
             this.btn3301.TabIndex = 13;
             this.btn3301.Text = "BOŞ";
             this.btn3301.UseVisualStyleBackColor = false;
+            this.btn3301.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // label20
             // 
@@ -945,7 +961,7 @@
             // 
             // btn3201
             // 
-            this.btn3201.BackColor = System.Drawing.Color.Silver;
+            this.btn3201.BackColor = System.Drawing.Color.Lime;
             this.btn3201.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3201.FlatAppearance.BorderSize = 0;
             this.btn3201.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -956,6 +972,7 @@
             this.btn3201.TabIndex = 13;
             this.btn3201.Text = "BOŞ";
             this.btn3201.UseVisualStyleBackColor = false;
+            this.btn3201.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // label18
             // 
@@ -971,7 +988,7 @@
             // 
             // btn3101
             // 
-            this.btn3101.BackColor = System.Drawing.Color.Silver;
+            this.btn3101.BackColor = System.Drawing.Color.Lime;
             this.btn3101.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3101.FlatAppearance.BorderSize = 0;
             this.btn3101.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -982,6 +999,7 @@
             this.btn3101.TabIndex = 13;
             this.btn3101.Text = "BOŞ";
             this.btn3101.UseVisualStyleBackColor = false;
+            this.btn3101.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // label16
             // 
@@ -1113,7 +1131,7 @@
             // 
             // btn2801
             // 
-            this.btn2801.BackColor = System.Drawing.Color.Silver;
+            this.btn2801.BackColor = System.Drawing.Color.Lime;
             this.btn2801.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2801.FlatAppearance.BorderSize = 0;
             this.btn2801.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1124,6 +1142,7 @@
             this.btn2801.TabIndex = 13;
             this.btn2801.Text = "BOŞ";
             this.btn2801.UseVisualStyleBackColor = false;
+            this.btn2801.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // label62
             // 
@@ -1173,7 +1192,7 @@
             // 
             // btn2701
             // 
-            this.btn2701.BackColor = System.Drawing.Color.Silver;
+            this.btn2701.BackColor = System.Drawing.Color.Lime;
             this.btn2701.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2701.FlatAppearance.BorderSize = 0;
             this.btn2701.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1184,6 +1203,7 @@
             this.btn2701.TabIndex = 13;
             this.btn2701.Text = "BOŞ";
             this.btn2701.UseVisualStyleBackColor = false;
+            this.btn2701.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // pictureBox22
             // 
@@ -1233,7 +1253,7 @@
             // 
             // btn2601
             // 
-            this.btn2601.BackColor = System.Drawing.Color.Silver;
+            this.btn2601.BackColor = System.Drawing.Color.Lime;
             this.btn2601.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2601.FlatAppearance.BorderSize = 0;
             this.btn2601.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1244,10 +1264,11 @@
             this.btn2601.TabIndex = 13;
             this.btn2601.Text = "BOŞ";
             this.btn2601.UseVisualStyleBackColor = false;
+            this.btn2601.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // btn2501
             // 
-            this.btn2501.BackColor = System.Drawing.Color.Silver;
+            this.btn2501.BackColor = System.Drawing.Color.Lime;
             this.btn2501.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2501.FlatAppearance.BorderSize = 0;
             this.btn2501.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1258,6 +1279,7 @@
             this.btn2501.TabIndex = 13;
             this.btn2501.Text = "BOŞ";
             this.btn2501.UseVisualStyleBackColor = false;
+            this.btn2501.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // label34
             // 
@@ -1285,7 +1307,7 @@
             // 
             // btn2401
             // 
-            this.btn2401.BackColor = System.Drawing.Color.Silver;
+            this.btn2401.BackColor = System.Drawing.Color.Lime;
             this.btn2401.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2401.FlatAppearance.BorderSize = 0;
             this.btn2401.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1296,6 +1318,7 @@
             this.btn2401.TabIndex = 13;
             this.btn2401.Text = "BOŞ";
             this.btn2401.UseVisualStyleBackColor = false;
+            this.btn2401.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // label30
             // 
@@ -1323,7 +1346,7 @@
             // 
             // btn2301
             // 
-            this.btn2301.BackColor = System.Drawing.Color.Silver;
+            this.btn2301.BackColor = System.Drawing.Color.Lime;
             this.btn2301.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2301.FlatAppearance.BorderSize = 0;
             this.btn2301.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1334,10 +1357,11 @@
             this.btn2301.TabIndex = 13;
             this.btn2301.Text = "BOŞ";
             this.btn2301.UseVisualStyleBackColor = false;
+            this.btn2301.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // btn2101
             // 
-            this.btn2101.BackColor = System.Drawing.Color.Silver;
+            this.btn2101.BackColor = System.Drawing.Color.Lime;
             this.btn2101.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2101.FlatAppearance.BorderSize = 0;
             this.btn2101.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1348,10 +1372,11 @@
             this.btn2101.TabIndex = 13;
             this.btn2101.Text = "BOŞ";
             this.btn2101.UseVisualStyleBackColor = false;
+            this.btn2101.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // btn2201
             // 
-            this.btn2201.BackColor = System.Drawing.Color.Silver;
+            this.btn2201.BackColor = System.Drawing.Color.Lime;
             this.btn2201.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2201.FlatAppearance.BorderSize = 0;
             this.btn2201.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1362,6 +1387,7 @@
             this.btn2201.TabIndex = 13;
             this.btn2201.Text = "BOŞ";
             this.btn2201.UseVisualStyleBackColor = false;
+            this.btn2201.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // groupBox4
             // 
@@ -1488,7 +1514,7 @@
             // 
             // btn1801
             // 
-            this.btn1801.BackColor = System.Drawing.Color.Silver;
+            this.btn1801.BackColor = System.Drawing.Color.Lime;
             this.btn1801.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1801.FlatAppearance.BorderSize = 0;
             this.btn1801.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1499,6 +1525,7 @@
             this.btn1801.TabIndex = 13;
             this.btn1801.Text = "BOŞ";
             this.btn1801.UseVisualStyleBackColor = false;
+            this.btn1801.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // label64
             // 
@@ -1552,7 +1579,7 @@
             // 
             // btn1701
             // 
-            this.btn1701.BackColor = System.Drawing.Color.Silver;
+            this.btn1701.BackColor = System.Drawing.Color.Lime;
             this.btn1701.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1701.FlatAppearance.BorderSize = 0;
             this.btn1701.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1563,6 +1590,7 @@
             this.btn1701.TabIndex = 13;
             this.btn1701.Text = "BOŞ";
             this.btn1701.UseVisualStyleBackColor = false;
+            this.btn1701.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // label49
             // 
@@ -1617,7 +1645,7 @@
             // 
             // btn1601
             // 
-            this.btn1601.BackColor = System.Drawing.Color.Silver;
+            this.btn1601.BackColor = System.Drawing.Color.Lime;
             this.btn1601.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1601.FlatAppearance.BorderSize = 0;
             this.btn1601.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1628,10 +1656,11 @@
             this.btn1601.TabIndex = 13;
             this.btn1601.Text = "BOŞ";
             this.btn1601.UseVisualStyleBackColor = false;
+            this.btn1601.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // btn1501
             // 
-            this.btn1501.BackColor = System.Drawing.Color.Silver;
+            this.btn1501.BackColor = System.Drawing.Color.Lime;
             this.btn1501.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1501.FlatAppearance.BorderSize = 0;
             this.btn1501.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1642,6 +1671,7 @@
             this.btn1501.TabIndex = 13;
             this.btn1501.Text = "BOŞ";
             this.btn1501.UseVisualStyleBackColor = false;
+            this.btn1501.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // label55
             // 
@@ -1671,7 +1701,7 @@
             // 
             // btn1201
             // 
-            this.btn1201.BackColor = System.Drawing.Color.Silver;
+            this.btn1201.BackColor = System.Drawing.Color.Lime;
             this.btn1201.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1201.FlatAppearance.BorderSize = 0;
             this.btn1201.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1682,10 +1712,11 @@
             this.btn1201.TabIndex = 13;
             this.btn1201.Text = "BOŞ";
             this.btn1201.UseVisualStyleBackColor = false;
+            this.btn1201.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // btn1401
             // 
-            this.btn1401.BackColor = System.Drawing.Color.Silver;
+            this.btn1401.BackColor = System.Drawing.Color.Lime;
             this.btn1401.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1401.FlatAppearance.BorderSize = 0;
             this.btn1401.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1696,10 +1727,11 @@
             this.btn1401.TabIndex = 13;
             this.btn1401.Text = "BOŞ";
             this.btn1401.UseVisualStyleBackColor = false;
+            this.btn1401.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // btn1101
             // 
-            this.btn1101.BackColor = System.Drawing.Color.Silver;
+            this.btn1101.BackColor = System.Drawing.Color.Lime;
             this.btn1101.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1101.FlatAppearance.BorderSize = 0;
             this.btn1101.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1710,10 +1742,11 @@
             this.btn1101.TabIndex = 13;
             this.btn1101.Text = "BOŞ";
             this.btn1101.UseVisualStyleBackColor = false;
+            this.btn1101.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // btn1301
             // 
-            this.btn1301.BackColor = System.Drawing.Color.Silver;
+            this.btn1301.BackColor = System.Drawing.Color.Lime;
             this.btn1301.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1301.FlatAppearance.BorderSize = 0;
             this.btn1301.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1724,6 +1757,7 @@
             this.btn1301.TabIndex = 13;
             this.btn1301.Text = "BOŞ";
             this.btn1301.UseVisualStyleBackColor = false;
+            this.btn1301.Click += new System.EventHandler(this.btn4101_Click);
             // 
             // label48
             // 
@@ -1746,7 +1780,7 @@
             this.label66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label66.Location = new System.Drawing.Point(59, 27);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(65, 16);
+            this.label66.Size = new System.Drawing.Size(73, 19);
             this.label66.TabIndex = 4;
             this.label66.Text = "Oda Tür:";
             // 
@@ -1755,7 +1789,7 @@
             this.txtAd.Font = new System.Drawing.Font("Arial", 10F);
             this.txtAd.Location = new System.Drawing.Point(558, 19);
             this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(195, 23);
+            this.txtAd.Size = new System.Drawing.Size(195, 27);
             this.txtAd.TabIndex = 5;
             // 
             // cbOdaTur
@@ -1764,7 +1798,7 @@
             this.cbOdaTur.FormattingEnabled = true;
             this.cbOdaTur.Location = new System.Drawing.Point(184, 24);
             this.cbOdaTur.Name = "cbOdaTur";
-            this.cbOdaTur.Size = new System.Drawing.Size(197, 24);
+            this.cbOdaTur.Size = new System.Drawing.Size(197, 27);
             this.cbOdaTur.TabIndex = 0;
             // 
             // cbOpsiyon
@@ -1773,7 +1807,7 @@
             this.cbOpsiyon.FormattingEnabled = true;
             this.cbOpsiyon.Location = new System.Drawing.Point(184, 46);
             this.cbOpsiyon.Name = "cbOpsiyon";
-            this.cbOpsiyon.Size = new System.Drawing.Size(197, 24);
+            this.cbOpsiyon.Size = new System.Drawing.Size(197, 27);
             this.cbOpsiyon.TabIndex = 1;
             // 
             // label67
@@ -1784,7 +1818,7 @@
             this.label67.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label67.Location = new System.Drawing.Point(59, 49);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(103, 16);
+            this.label67.Size = new System.Drawing.Size(118, 19);
             this.label67.TabIndex = 4;
             this.label67.Text = "Oda Opsiyonu:";
             // 
@@ -1796,7 +1830,7 @@
             this.label68.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label68.Location = new System.Drawing.Point(59, 71);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(33, 16);
+            this.label68.Size = new System.Drawing.Size(38, 19);
             this.label68.TabIndex = 4;
             this.label68.Text = "Kat:";
             // 
@@ -1806,7 +1840,7 @@
             this.cbKat.FormattingEnabled = true;
             this.cbKat.Location = new System.Drawing.Point(184, 68);
             this.cbKat.Name = "cbKat";
-            this.cbKat.Size = new System.Drawing.Size(197, 24);
+            this.cbKat.Size = new System.Drawing.Size(197, 27);
             this.cbKat.TabIndex = 2;
             // 
             // label69
@@ -1817,7 +1851,7 @@
             this.label69.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label69.Location = new System.Drawing.Point(457, 24);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(29, 16);
+            this.label69.Size = new System.Drawing.Size(34, 19);
             this.label69.TabIndex = 6;
             this.label69.Text = "Ad:";
             // 
@@ -1826,7 +1860,7 @@
             this.txtSoyad.Font = new System.Drawing.Font("Arial", 10F);
             this.txtSoyad.Location = new System.Drawing.Point(558, 41);
             this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(195, 23);
+            this.txtSoyad.Size = new System.Drawing.Size(195, 27);
             this.txtSoyad.TabIndex = 6;
             // 
             // txtKimlikNo
@@ -1835,7 +1869,7 @@
             this.txtKimlikNo.Location = new System.Drawing.Point(558, 63);
             this.txtKimlikNo.MaxLength = 11;
             this.txtKimlikNo.Name = "txtKimlikNo";
-            this.txtKimlikNo.Size = new System.Drawing.Size(195, 23);
+            this.txtKimlikNo.Size = new System.Drawing.Size(195, 27);
             this.txtKimlikNo.TabIndex = 7;
             // 
             // label71
@@ -1846,7 +1880,7 @@
             this.label71.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label71.Location = new System.Drawing.Point(457, 69);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(69, 16);
+            this.label71.Size = new System.Drawing.Size(82, 19);
             this.label71.TabIndex = 6;
             this.label71.Text = "Kimlik No:";
             // 
@@ -1858,7 +1892,7 @@
             this.label72.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label72.Location = new System.Drawing.Point(457, 90);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(58, 16);
+            this.label72.Size = new System.Drawing.Size(65, 19);
             this.label72.TabIndex = 6;
             this.label72.Text = "Telefon:";
             // 
@@ -1866,18 +1900,24 @@
             // 
             this.cbCinsiyet.Font = new System.Drawing.Font("Arial", 10F);
             this.cbCinsiyet.FormattingEnabled = true;
+            this.cbCinsiyet.Items.AddRange(new object[] {
+            "Bayan",
+            "Erkek"});
             this.cbCinsiyet.Location = new System.Drawing.Point(558, 105);
             this.cbCinsiyet.Name = "cbCinsiyet";
-            this.cbCinsiyet.Size = new System.Drawing.Size(195, 24);
+            this.cbCinsiyet.Size = new System.Drawing.Size(195, 27);
             this.cbCinsiyet.TabIndex = 9;
             // 
             // cbMedeniHal
             // 
             this.cbMedeniHal.Font = new System.Drawing.Font("Arial", 10F);
             this.cbMedeniHal.FormattingEnabled = true;
+            this.cbMedeniHal.Items.AddRange(new object[] {
+            "Bekar",
+            "Evli"});
             this.cbMedeniHal.Location = new System.Drawing.Point(558, 127);
             this.cbMedeniHal.Name = "cbMedeniHal";
-            this.cbMedeniHal.Size = new System.Drawing.Size(195, 24);
+            this.cbMedeniHal.Size = new System.Drawing.Size(195, 27);
             this.cbMedeniHal.TabIndex = 10;
             // 
             // label73
@@ -1888,7 +1928,7 @@
             this.label73.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label73.Location = new System.Drawing.Point(457, 111);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(62, 16);
+            this.label73.Size = new System.Drawing.Size(73, 19);
             this.label73.TabIndex = 6;
             this.label73.Text = "Cinsiyet:";
             // 
@@ -1900,7 +1940,7 @@
             this.label74.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label74.Location = new System.Drawing.Point(457, 132);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(82, 16);
+            this.label74.Size = new System.Drawing.Size(95, 19);
             this.label74.TabIndex = 6;
             this.label74.Text = "Medeni Hal:";
             // 
@@ -1909,7 +1949,7 @@
             this.dtpGiris.Font = new System.Drawing.Font("Arial", 10F);
             this.dtpGiris.Location = new System.Drawing.Point(356, 91);
             this.dtpGiris.Name = "dtpGiris";
-            this.dtpGiris.Size = new System.Drawing.Size(25, 23);
+            this.dtpGiris.Size = new System.Drawing.Size(25, 27);
             this.dtpGiris.TabIndex = 7;
             this.dtpGiris.ValueChanged += new System.EventHandler(this.dtpGiris_ValueChanged);
             // 
@@ -1918,7 +1958,7 @@
             this.txtGiris.Font = new System.Drawing.Font("Arial", 10F);
             this.txtGiris.Location = new System.Drawing.Point(184, 91);
             this.txtGiris.Name = "txtGiris";
-            this.txtGiris.Size = new System.Drawing.Size(178, 23);
+            this.txtGiris.Size = new System.Drawing.Size(178, 27);
             this.txtGiris.TabIndex = 3;
             // 
             // dtpCikis
@@ -1926,7 +1966,7 @@
             this.dtpCikis.Font = new System.Drawing.Font("Arial", 10F);
             this.dtpCikis.Location = new System.Drawing.Point(356, 113);
             this.dtpCikis.Name = "dtpCikis";
-            this.dtpCikis.Size = new System.Drawing.Size(25, 23);
+            this.dtpCikis.Size = new System.Drawing.Size(25, 27);
             this.dtpCikis.TabIndex = 7;
             this.dtpCikis.ValueChanged += new System.EventHandler(this.dtpCikis_ValueChanged);
             // 
@@ -1935,7 +1975,7 @@
             this.txtCikis.Font = new System.Drawing.Font("Arial", 10F);
             this.txtCikis.Location = new System.Drawing.Point(184, 113);
             this.txtCikis.Name = "txtCikis";
-            this.txtCikis.Size = new System.Drawing.Size(178, 23);
+            this.txtCikis.Size = new System.Drawing.Size(178, 27);
             this.txtCikis.TabIndex = 4;
             // 
             // label75
@@ -1946,7 +1986,7 @@
             this.label75.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label75.Location = new System.Drawing.Point(59, 94);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(79, 16);
+            this.label75.Size = new System.Drawing.Size(92, 19);
             this.label75.TabIndex = 9;
             this.label75.Text = "Giriş Tarihi:";
             // 
@@ -1958,7 +1998,7 @@
             this.label77.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label77.Location = new System.Drawing.Point(59, 152);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(95, 16);
+            this.label77.Size = new System.Drawing.Size(109, 19);
             this.label77.TabIndex = 8;
             this.label77.Text = "Oda Konumu:";
             // 
@@ -1968,7 +2008,7 @@
             this.txtKat.Location = new System.Drawing.Point(184, 146);
             this.txtKat.Name = "txtKat";
             this.txtKat.ReadOnly = true;
-            this.txtKat.Size = new System.Drawing.Size(36, 23);
+            this.txtKat.Size = new System.Drawing.Size(36, 27);
             this.txtKat.TabIndex = 7;
             // 
             // txtOdaNo
@@ -1977,7 +2017,7 @@
             this.txtOdaNo.Location = new System.Drawing.Point(218, 146);
             this.txtOdaNo.Name = "txtOdaNo";
             this.txtOdaNo.ReadOnly = true;
-            this.txtOdaNo.Size = new System.Drawing.Size(163, 23);
+            this.txtOdaNo.Size = new System.Drawing.Size(163, 27);
             this.txtOdaNo.TabIndex = 7;
             // 
             // label78
@@ -1988,7 +2028,7 @@
             this.label78.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label78.Location = new System.Drawing.Point(59, 171);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(79, 16);
+            this.label78.Size = new System.Drawing.Size(92, 19);
             this.label78.TabIndex = 9;
             this.label78.Text = "Oda Bilgisi:";
             // 
@@ -1998,7 +2038,7 @@
             this.txtOdaBilgisi.Location = new System.Drawing.Point(184, 168);
             this.txtOdaBilgisi.Name = "txtOdaBilgisi";
             this.txtOdaBilgisi.ReadOnly = true;
-            this.txtOdaBilgisi.Size = new System.Drawing.Size(197, 23);
+            this.txtOdaBilgisi.Size = new System.Drawing.Size(197, 27);
             this.txtOdaBilgisi.TabIndex = 7;
             // 
             // label79
@@ -2009,7 +2049,7 @@
             this.label79.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label79.Location = new System.Drawing.Point(457, 153);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(49, 16);
+            this.label79.Size = new System.Drawing.Size(57, 19);
             this.label79.TabIndex = 8;
             this.label79.Text = "Adres:";
             // 
@@ -2069,6 +2109,25 @@
             this.panel1.Size = new System.Drawing.Size(1264, 229);
             this.panel1.TabIndex = 0;
             // 
+            // txtTelefon
+            // 
+            this.txtTelefon.Location = new System.Drawing.Point(558, 85);
+            this.txtTelefon.Mask = "(999) 000-00-00";
+            this.txtTelefon.Name = "txtTelefon";
+            this.txtTelefon.Size = new System.Drawing.Size(195, 25);
+            this.txtTelefon.TabIndex = 8;
+            // 
+            // txtPlaka
+            // 
+            this.txtPlaka.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtPlaka.Font = new System.Drawing.Font("Arial", 10F);
+            this.txtPlaka.Location = new System.Drawing.Point(1008, 18);
+            this.txtPlaka.MaxLength = 10;
+            this.txtPlaka.Multiline = true;
+            this.txtPlaka.Name = "txtPlaka";
+            this.txtPlaka.Size = new System.Drawing.Size(195, 23);
+            this.txtPlaka.TabIndex = 13;
+            // 
             // txtCheckIn
             // 
             this.txtCheckIn.Font = new System.Drawing.Font("Arial", 10F);
@@ -2086,7 +2145,7 @@
             this.label85.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label85.Location = new System.Drawing.Point(833, 44);
             this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(141, 16);
+            this.label85.Size = new System.Drawing.Size(170, 19);
             this.label85.TabIndex = 13;
             this.label85.Text = "Check-In Açıklaması :";
             // 
@@ -2098,7 +2157,7 @@
             this.label84.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label84.Location = new System.Drawing.Point(833, 21);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(94, 16);
+            this.label84.Size = new System.Drawing.Size(112, 19);
             this.label84.TabIndex = 13;
             this.label84.Text = "Araç Plakası :";
             // 
@@ -2114,14 +2173,6 @@
             this.pbKimlikDogrula.TabStop = false;
             this.toolTip1.SetToolTip(this.pbKimlikDogrula, "Kimlik Sorgulama\r\n");
             // 
-            // txtTelefon
-            // 
-            this.txtTelefon.Location = new System.Drawing.Point(558, 85);
-            this.txtTelefon.Mask = "(999) 000-00-00";
-            this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(195, 21);
-            this.txtTelefon.TabIndex = 8;
-            // 
             // label70
             // 
             this.label70.AutoSize = true;
@@ -2130,7 +2181,7 @@
             this.label70.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label70.Location = new System.Drawing.Point(59, 116);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(80, 16);
+            this.label70.Size = new System.Drawing.Size(96, 19);
             this.label70.TabIndex = 9;
             this.label70.Text = "Çıkış Tarihi:";
             // 
@@ -2142,7 +2193,7 @@
             this.label80.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label80.Location = new System.Drawing.Point(457, 46);
             this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(52, 16);
+            this.label80.Size = new System.Drawing.Size(61, 19);
             this.label80.TabIndex = 6;
             this.label80.Text = "Soyad:";
             // 
@@ -2167,7 +2218,7 @@
             this.rbBalkon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rbBalkon.Location = new System.Drawing.Point(15, 63);
             this.rbBalkon.Name = "rbBalkon";
-            this.rbBalkon.Size = new System.Drawing.Size(63, 19);
+            this.rbBalkon.Size = new System.Drawing.Size(73, 21);
             this.rbBalkon.TabIndex = 14;
             this.rbBalkon.TabStop = true;
             this.rbBalkon.Text = "Balkon";
@@ -2179,7 +2230,7 @@
             this.rbKose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rbKose.Location = new System.Drawing.Point(15, 44);
             this.rbKose.Name = "rbKose";
-            this.rbKose.Size = new System.Drawing.Size(54, 19);
+            this.rbKose.Size = new System.Drawing.Size(63, 21);
             this.rbKose.TabIndex = 14;
             this.rbKose.TabStop = true;
             this.rbKose.Text = "Köşe";
@@ -2191,7 +2242,7 @@
             this.rbDM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rbDM.Location = new System.Drawing.Point(15, 23);
             this.rbDM.Name = "rbDM";
-            this.rbDM.Size = new System.Drawing.Size(111, 19);
+            this.rbDM.Size = new System.Drawing.Size(133, 21);
             this.rbDM.TabIndex = 14;
             this.rbDM.TabStop = true;
             this.rbDM.Text = "Deniz Manzaralı";
@@ -2218,7 +2269,7 @@
             this.rbNoSmoking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rbNoSmoking.Location = new System.Drawing.Point(15, 54);
             this.rbNoSmoking.Name = "rbNoSmoking";
-            this.rbNoSmoking.Size = new System.Drawing.Size(109, 19);
+            this.rbNoSmoking.Size = new System.Drawing.Size(129, 21);
             this.rbNoSmoking.TabIndex = 14;
             this.rbNoSmoking.TabStop = true;
             this.rbNoSmoking.Text = "Sigara İçilemez";
@@ -2230,7 +2281,7 @@
             this.rbSmoking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rbSmoking.Location = new System.Drawing.Point(15, 33);
             this.rbSmoking.Name = "rbSmoking";
-            this.rbSmoking.Size = new System.Drawing.Size(106, 19);
+            this.rbSmoking.Size = new System.Drawing.Size(122, 21);
             this.rbSmoking.TabIndex = 14;
             this.rbSmoking.Text = "Sigara İçilebilir";
             this.rbSmoking.UseVisualStyleBackColor = true;
@@ -2259,6 +2310,8 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.lblBosOdaSayisi);
+            this.groupBox5.Controls.Add(this.lblOdaSayisi);
             this.groupBox5.Controls.Add(this.label82);
             this.groupBox5.Controls.Add(this.label83);
             this.groupBox5.Controls.Add(this.label81);
@@ -2271,6 +2324,26 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Genel Bilgiler";
             // 
+            // lblBosOdaSayisi
+            // 
+            this.lblBosOdaSayisi.AutoSize = true;
+            this.lblBosOdaSayisi.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBosOdaSayisi.Location = new System.Drawing.Point(130, 83);
+            this.lblBosOdaSayisi.Name = "lblBosOdaSayisi";
+            this.lblBosOdaSayisi.Size = new System.Drawing.Size(27, 19);
+            this.lblBosOdaSayisi.TabIndex = 12;
+            this.lblBosOdaSayisi.Text = "31";
+            // 
+            // lblOdaSayisi
+            // 
+            this.lblOdaSayisi.AutoSize = true;
+            this.lblOdaSayisi.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOdaSayisi.Location = new System.Drawing.Point(158, 55);
+            this.lblOdaSayisi.Name = "lblOdaSayisi";
+            this.lblOdaSayisi.Size = new System.Drawing.Size(27, 19);
+            this.lblOdaSayisi.TabIndex = 11;
+            this.lblOdaSayisi.Text = "32";
+            // 
             // label82
             // 
             this.label82.AutoSize = true;
@@ -2279,7 +2352,7 @@
             this.label82.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label82.Location = new System.Drawing.Point(6, 83);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(108, 16);
+            this.label82.Size = new System.Drawing.Size(129, 19);
             this.label82.TabIndex = 10;
             this.label82.Text = "Boş Oda Sayısı:";
             // 
@@ -2291,7 +2364,7 @@
             this.label83.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label83.Location = new System.Drawing.Point(6, 27);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(99, 16);
+            this.label83.Size = new System.Drawing.Size(119, 19);
             this.label83.TabIndex = 9;
             this.label83.Text = "Müşteri Sayısı:";
             // 
@@ -2303,7 +2376,7 @@
             this.label81.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label81.Location = new System.Drawing.Point(6, 55);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(129, 16);
+            this.label81.Size = new System.Drawing.Size(151, 19);
             this.label81.TabIndex = 9;
             this.label81.Text = "Toplam Oda Sayısı:";
             // 
@@ -2315,7 +2388,7 @@
             this.label76.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label76.Location = new System.Drawing.Point(187, -19);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(106, 16);
+            this.label76.Size = new System.Drawing.Size(122, 19);
             this.label76.TabIndex = 8;
             this.label76.Text = "Son Hareketler:";
             // 
@@ -2327,17 +2400,17 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label3.Location = new System.Drawing.Point(25, 248);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 16);
+            this.label3.Size = new System.Drawing.Size(122, 19);
             this.label3.TabIndex = 7;
             this.label3.Text = "Son Hareketler:";
             // 
             // lbSonHareketler
             // 
             this.lbSonHareketler.FormattingEnabled = true;
-            this.lbSonHareketler.ItemHeight = 15;
+            this.lbSonHareketler.ItemHeight = 17;
             this.lbSonHareketler.Location = new System.Drawing.Point(28, 269);
             this.lbSonHareketler.Name = "lbSonHareketler";
-            this.lbSonHareketler.Size = new System.Drawing.Size(232, 199);
+            this.lbSonHareketler.Size = new System.Drawing.Size(232, 191);
             this.lbSonHareketler.TabIndex = 0;
             // 
             // btnOK
@@ -2355,20 +2428,9 @@
             this.toolTip1.SetToolTip(this.btnOK, "İşlemi tamamlamak için butona tıklayınız.");
             this.btnOK.UseVisualStyleBackColor = false;
             // 
-            // txtPlaka
-            // 
-            this.txtPlaka.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPlaka.Font = new System.Drawing.Font("Arial", 10F);
-            this.txtPlaka.Location = new System.Drawing.Point(1008, 18);
-            this.txtPlaka.MaxLength = 10;
-            this.txtPlaka.Multiline = true;
-            this.txtPlaka.Name = "txtPlaka";
-            this.txtPlaka.Size = new System.Drawing.Size(195, 23);
-            this.txtPlaka.TabIndex = 13;
-            // 
             // FormResepsiyon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::OtelOtomasyon.WinForm.UI.Properties.Resources.backgroundpattern_min;
@@ -2620,5 +2682,7 @@
         private System.Windows.Forms.PictureBox pictureBox24;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TextBox txtPlaka;
+        private System.Windows.Forms.Label lblBosOdaSayisi;
+        private System.Windows.Forms.Label lblOdaSayisi;
     }
 }

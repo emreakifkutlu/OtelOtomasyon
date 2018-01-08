@@ -1,4 +1,5 @@
-﻿using OtelOtomasyon.Core.Concrete;
+﻿using OtelOtomasyon.Core.Abstract;
+using OtelOtomasyon.Core.Concrete;
 using OtelOtomasyon.DAL.Context;
 using OtelOtomasyon.DAL.Entities;
 using OtelOtomasyon.Repository.Abstract;
@@ -13,9 +14,12 @@ namespace OtelOtomasyon.Repository.Concrete
 {
     public class OdaRepository : EFRepositoryBase<Oda, ProjectContext>, IOdaRepository
     {
+        
         public OdaRepository(DbContext Context) : base(Context)
         {
+ 
+         }
 
-        }
+       
     }
 }

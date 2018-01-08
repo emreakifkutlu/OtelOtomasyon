@@ -15,5 +15,14 @@ namespace OtelOtomassyon.BLL.Services.Concretes
         {
             _odaRepository = odaRepository;
         }
-    }
+
+        public int BosOdaSayisiBul()
+        {
+           
+            int BosOdaSayisi = _odaRepository.GetList().Where(x=>x.DoluMu==false).Count();
+            return BosOdaSayisi;
+        }
+            
+        }
+    
 }

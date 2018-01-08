@@ -1,4 +1,6 @@
 ﻿using Ninject;
+using OtelOtomassyon.BLL.Services.Abstracts;
+using OtelOtomassyon.BLL.Services.Concretes;
 using OtelOtomasyon.DAL.Context;
 using OtelOtomasyon.Repository.Abstract;
 using OtelOtomasyon.Repository.Concrete;
@@ -19,6 +21,8 @@ namespace OtelOtomasyon.WinForm.UI.Ninject
         {
             kernel.Bind<DbContext>().To<ProjectContext>();
             kernel.Bind<IUnitOfWork>().To<UnitOfWork>();
+            kernel.Bind<IOdaService>().To<OdaService>();
+            kernel.Bind<IOdaRepository>().To<OdaRepository>();
 
             return kernel;
         }

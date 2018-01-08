@@ -59,7 +59,7 @@
             // 
             this.txtOdaAd.Location = new System.Drawing.Point(140, 62);
             this.txtOdaAd.Name = "txtOdaAd";
-            this.txtOdaAd.Size = new System.Drawing.Size(100, 25);
+            this.txtOdaAd.Size = new System.Drawing.Size(121, 25);
             this.txtOdaAd.TabIndex = 1;
             // 
             // label2
@@ -151,6 +151,7 @@
             this.btnSil.TabIndex = 11;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // bntGüncelle
             // 
@@ -181,6 +182,7 @@
             this.bntYeni.TabIndex = 14;
             this.bntYeni.Text = "Yeni";
             this.bntYeni.UseVisualStyleBackColor = true;
+            this.bntYeni.Click += new System.EventHandler(this.bntYeni_Click);
             // 
             // FormOdaIslemleri
             // 

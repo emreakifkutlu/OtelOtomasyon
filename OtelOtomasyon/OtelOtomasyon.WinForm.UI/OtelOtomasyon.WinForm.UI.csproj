@@ -180,6 +180,10 @@
     <None Include="Resources\search-icon-orange.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\OtelOtomassyon.BLL\OtelOtomassyon.BLL.csproj">
+      <Project>{D73C059D-8953-4020-B830-9F35D7D77F4D}</Project>
+      <Name>OtelOtomassyon.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OtelOtomasyon.Core\OtelOtomasyon.Core.csproj">
       <Project>{9e5e7cda-f6dc-4380-9819-07bfe0a3b1e1}</Project>
       <Name>OtelOtomasyon.Core</Name>

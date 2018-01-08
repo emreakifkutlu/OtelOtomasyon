@@ -8,6 +8,6 @@ namespace OtelOtomassyon.BLL.Services.Abstracts
 {
    public interface IOdaService
     {
-
+     int BosOdaSayisiBul();
     }
 }

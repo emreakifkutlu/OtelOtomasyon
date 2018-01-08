@@ -16,7 +16,7 @@ namespace OtelOtomasyon.WinForm.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormOdaIslemleri());
+            Application.Run(new FormResepsiyon());
         }
     }
 }

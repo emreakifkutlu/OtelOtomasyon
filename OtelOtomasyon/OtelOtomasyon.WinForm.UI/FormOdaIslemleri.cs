@@ -18,7 +18,7 @@ namespace OtelOtomasyon.WinForm.UI
     public partial class FormOdaIslemleri : Form
     {
         protected IUnitOfWork _unitOfWork;
-    
+        
 
 
         public FormOdaIslemleri()
@@ -71,6 +71,8 @@ namespace OtelOtomasyon.WinForm.UI
             {
                 MessageBox.Show("Kayıt başarılı");
             }
+
+            Temizle();
             dgvOdalar.DataSource = _unitOfWork.GetRepo<Oda>().GetList();
         }
 
@@ -101,6 +103,9 @@ namespace OtelOtomasyon.WinForm.UI
             {
                 MessageBox.Show("Güncelleme başarılı");
             }
+
+            Temizle();
+            dgvOdalar.DataSource = _unitOfWork.GetRepo<Oda>().GetList();
         }
 
         private void dgvOdalar_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -122,5 +127,38 @@ namespace OtelOtomasyon.WinForm.UI
             }
             
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            Oda o = new Oda();
+            o = _unitOfWork.GetRepo<Oda>().GetById((int)dgvOdalar.CurrentRow.Cells[0].Value);
+            _unitOfWork.GetRepo<Oda>().Delete(o.Id);
+
+           
+            if (_unitOfWork.Commit() > 0)
+            {
+                MessageBox.Show("Silme işlemi tamamlandı");
+            }
+
+            dgvOdalar.DataSource = _unitOfWork.GetRepo<Oda>().GetList();
+
+            Temizle();
+        }
+
+        private void Temizle()
+        {
+            txtOdaAd.Clear();
+            cbOdaTur.SelectedItem = null;
+            cbOzellik.SelectedItem = null;
+            cbKat.SelectedItem = null;
+            cbAktif.SelectedItem = null;
+        }
+
+        private void bntYeni_Click(object sender, EventArgs e)
+        {
+            Temizle();
+        }
+
+   
     }
 }
