@@ -2,6 +2,7 @@
 using OtelOtomassyon.BLL.Services.Abstracts;
 using OtelOtomassyon.BLL.Services.Concretes;
 using OtelOtomasyon.DAL.Entities;
+using OtelOtomasyon.Repository.Abstract;
 using OtelOtomasyon.Repository.UOW.Abstract;
 using OtelOtomasyon.WinForm.UI.Ninject;
 using System;
@@ -19,19 +20,19 @@ namespace OtelOtomasyon.WinForm.UI
     public partial class FormResepsiyon : Form
     {
         protected IUnitOfWork _unitOfWork;
-        protected IOdaService _odaService;
+        protected IOdaRepository _odaRepo;
         public FormResepsiyon()
         {
             var container = NinjectDependencyContainer.RegisterDependency(new StandardKernel());
             _unitOfWork = container.Get<IUnitOfWork>();
-            _odaService=container.Get<IOdaService>();
+            _odaRepo = container.Get<IOdaRepository>();
             InitializeComponent();
         }
 
         private void FormResepsiyon_Load(object sender, EventArgs e)
         {
 
-            lblBosOdaSayisi.Text = _odaService.BosOdaSayisiBul().ToString();
+            lblBosOdaSayisi.Text = _odaRepo.BosOdaSayisiBul().ToString();
             #region Tarih ayarları
             dtpTarih.MinDate = DateTime.Today;
             dtpTarih.MaxDate = dtpTarih.MinDate.AddDays(7);

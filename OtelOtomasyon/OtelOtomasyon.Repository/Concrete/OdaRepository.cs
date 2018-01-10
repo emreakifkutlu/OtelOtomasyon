@@ -17,9 +17,13 @@ namespace OtelOtomasyon.Repository.Concrete
         
         public OdaRepository(DbContext Context) : base(Context)
         {
- 
+            
          }
 
-       
+        public int BosOdaSayisiBul()
+        {
+            int BosOdaSayisi = _dbContext.Set<Oda>().Where(x => x.DoluMu == false).Count();
+            return BosOdaSayisi;
+        }
     }
 }

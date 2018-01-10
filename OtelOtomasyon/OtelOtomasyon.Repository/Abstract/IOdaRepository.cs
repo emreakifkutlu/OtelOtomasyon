@@ -10,7 +10,6 @@ namespace OtelOtomasyon.Repository.Abstract
 {
     public interface IOdaRepository : IRepository<Oda>
     {
-       
-        
+        int BosOdaSayisiBul();
     }
 }

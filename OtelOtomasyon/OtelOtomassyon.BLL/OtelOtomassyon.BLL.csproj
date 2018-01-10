@@ -81,6 +81,8 @@
     <Compile Include="Validations\KatValidator.cs" />
     <Compile Include="Validations\LoginValidator.cs" />
     <Compile Include="Validations\MusteriValidator.cs" />
+    <Compile Include="Validations\OdaEkleValidator.cs" />
+    <Compile Include="Validations\OdaGuncelleValidator.cs" />
     <Compile Include="Validations\OdaTurValidator.cs" />
     <Compile Include="Validations\OdaValidator.cs" />
     <Compile Include="Validations\OzellikValidator.cs" />

@@ -1,4 +1,5 @@
 ﻿using Ninject;
+using OtelOtomassyon.BLL.Services.Abstracts;
 using OtelOtomasyon.DAL.Entities;
 using OtelOtomasyon.Repository.Abstract;
 using OtelOtomasyon.Repository.UOW.Abstract;
@@ -17,14 +18,15 @@ namespace OtelOtomasyon.WinForm.UI
 {
     public partial class FormOdaIslemleri : Form
     {
-        protected IUnitOfWork _unitOfWork;
-        
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IOdaService _odaService;
 
 
         public FormOdaIslemleri()
         {
             var container = NinjectDependencyContainer.RegisterDependency(new StandardKernel());
             _unitOfWork = container.Get<IUnitOfWork>();
+            _odaService = container.Get<IOdaService>();
             InitializeComponent();
         }
 
@@ -38,6 +40,7 @@ namespace OtelOtomasyon.WinForm.UI
             }).ToList();
             cbOdaTur.ValueMember = "Id";
             cbOdaTur.DisplayMember = "TurAd";
+           
 
             var OzellikList = _unitOfWork.GetRepo<Ozellik>().GetList();
             cbOzellik.DataSource = OzellikList.Select(x => new
@@ -47,6 +50,7 @@ namespace OtelOtomasyon.WinForm.UI
             }).ToList();
             cbOzellik.ValueMember = "Id";
             cbOzellik.DisplayMember = "OzellikAd";
+          
 
             var KatList = _unitOfWork.GetRepo<Kat>().GetList();
             cbKat.DataSource = KatList.Select(x => new
@@ -56,6 +60,7 @@ namespace OtelOtomasyon.WinForm.UI
             }).ToList();
             cbKat.ValueMember = "Id";
             cbKat.DisplayMember = "KatNo";
+           
 
             dgvOdalar.DataSource = _unitOfWork.GetRepo<Oda>().GetList();
         }
@@ -66,14 +71,27 @@ namespace OtelOtomasyon.WinForm.UI
             o.OdaAd = txtOdaAd.Text;
             o.FiyatId = FiyatIDBul((int)cbOzellik.SelectedValue, (int)cbOdaTur.SelectedValue);
             o.KatId =(int)cbKat.SelectedValue;
-            _unitOfWork.GetRepo<Oda>().Add(o);
-            if (_unitOfWork.Commit()>0)
+            if (cbAktif.SelectedItem.ToString() == "Boş")
             {
-                MessageBox.Show("Kayıt başarılı");
+                o.DoluMu = false;
+            }
+            else if (cbAktif.SelectedItem.ToString()== "Dolu")
+            {
+                o.DoluMu = true;
             }
 
+            var result = _odaService.OdaEkle(o);
+            if (result.IsValid)
+            {
+                MessageBox.Show(result.Message);
+            }
+            else
+            {
+                MessageBox.Show(result.Errors.FirstOrDefault());
+            }
             Temizle();
             dgvOdalar.DataSource = _unitOfWork.GetRepo<Oda>().GetList();
+            
         }
 
         public int FiyatIDBul(int ozellikId, int odaTurId)
@@ -85,27 +103,37 @@ namespace OtelOtomasyon.WinForm.UI
 
         private void bntGüncelle_Click(object sender, EventArgs e)
         {
+            
             Oda o = new Oda();
-            o = _unitOfWork.GetRepo<Oda>().GetById((int)dgvOdalar.CurrentRow.Cells[0].Value);
+            o.Id = _unitOfWork.GetRepo<Oda>().GetById((int)dgvOdalar.CurrentRow.Cells[0].Value).Id;
             o.OdaAd = txtOdaAd.Text;
             o.FiyatId = FiyatIDBul((int)cbOzellik.SelectedValue, (int)cbOdaTur.SelectedValue);
             o.KatId =(int) cbKat.SelectedValue;
-            if (cbAktif.SelectedItem == "Boş")
+            if (cbAktif.SelectedItem.ToString() == "Boş")
             {
                 o.DoluMu=false;
             }
-            else if (cbAktif.SelectedItem == "Dolu")
+            else if (cbAktif.SelectedItem.ToString() == "Dolu")
             {
                 o.DoluMu = true;
             }
-            _unitOfWork.GetRepo<Oda>().Update(o);
-            if (_unitOfWork.Commit() > 0)
-            {
-                MessageBox.Show("Güncelleme başarılı");
-            }
 
-            Temizle();
+            var result = _odaService.OdaGuncelle(o);
+            if (result.IsValid)
+            {
+                Temizle();
+                MessageBox.Show(result.Message);
+               
+            }
+            else
+            {
+                MessageBox.Show(result.Errors.FirstOrDefault());
+            }
+          
+            
             dgvOdalar.DataSource = _unitOfWork.GetRepo<Oda>().GetList();
+
+
         }
 
         private void dgvOdalar_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -115,6 +143,8 @@ namespace OtelOtomasyon.WinForm.UI
             txtOdaAd.Text=  o.OdaAd;
             int SecilenOdaTurId = _unitOfWork.GetRepo<Fiyat>().Where(x => x.Id == o.FiyatId).Select(x=>x.OdaTurId).FirstOrDefault();
             cbOdaTur.SelectedValue = SecilenOdaTurId;
+            int SecilenOzellikId= _unitOfWork.GetRepo<Fiyat>().Where(x => x.Id == o.FiyatId).Select(x => x.OzellikId).FirstOrDefault();
+            cbOzellik.SelectedValue = SecilenOzellikId;
             cbKat.SelectedValue = o.KatId;
          
             if (o.DoluMu == false)
@@ -153,7 +183,7 @@ namespace OtelOtomasyon.WinForm.UI
             cbKat.SelectedItem = null;
             cbAktif.SelectedItem = null;
         }
-
+      
         private void bntYeni_Click(object sender, EventArgs e)
         {
             Temizle();
