@@ -1800,6 +1800,7 @@
             this.cbOdaTur.Name = "cbOdaTur";
             this.cbOdaTur.Size = new System.Drawing.Size(197, 27);
             this.cbOdaTur.TabIndex = 0;
+            this.cbOdaTur.SelectedIndexChanged += new System.EventHandler(this.cbOdaTur_SelectedIndexChanged);
             // 
             // cbOpsiyon
             // 
@@ -1809,6 +1810,7 @@
             this.cbOpsiyon.Name = "cbOpsiyon";
             this.cbOpsiyon.Size = new System.Drawing.Size(197, 27);
             this.cbOpsiyon.TabIndex = 1;
+            this.cbOpsiyon.SelectedIndexChanged += new System.EventHandler(this.cbOpsiyon_SelectedIndexChanged);
             // 
             // label67
             // 
@@ -2215,6 +2217,7 @@
             // rbBalkon
             // 
             this.rbBalkon.AutoSize = true;
+            this.rbBalkon.Enabled = false;
             this.rbBalkon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rbBalkon.Location = new System.Drawing.Point(15, 63);
             this.rbBalkon.Name = "rbBalkon";
@@ -2227,6 +2230,7 @@
             // rbKose
             // 
             this.rbKose.AutoSize = true;
+            this.rbKose.Enabled = false;
             this.rbKose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rbKose.Location = new System.Drawing.Point(15, 44);
             this.rbKose.Name = "rbKose";
@@ -2239,6 +2243,7 @@
             // rbDM
             // 
             this.rbDM.AutoSize = true;
+            this.rbDM.Enabled = false;
             this.rbDM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rbDM.Location = new System.Drawing.Point(15, 23);
             this.rbDM.Name = "rbDM";
@@ -2266,6 +2271,7 @@
             // 
             this.rbNoSmoking.AutoSize = true;
             this.rbNoSmoking.Checked = true;
+            this.rbNoSmoking.Enabled = false;
             this.rbNoSmoking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rbNoSmoking.Location = new System.Drawing.Point(15, 54);
             this.rbNoSmoking.Name = "rbNoSmoking";
@@ -2278,6 +2284,7 @@
             // rbSmoking
             // 
             this.rbSmoking.AutoSize = true;
+            this.rbSmoking.Enabled = false;
             this.rbSmoking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rbSmoking.Location = new System.Drawing.Point(15, 33);
             this.rbSmoking.Name = "rbSmoking";
@@ -2433,7 +2440,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::OtelOtomasyon.WinForm.UI.Properties.Resources.backgroundpattern_min;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 761);
             this.Controls.Add(this.panel2);

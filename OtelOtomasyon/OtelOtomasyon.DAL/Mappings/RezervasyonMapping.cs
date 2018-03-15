@@ -25,6 +25,12 @@ namespace OtelOtomasyon.DAL.Mappings
             .HasColumnOrder(4)
             .IsRequired();
 
+            Property(x => x.RezerveMi)
+            .HasColumnType("bit")
+            .IsRequired()
+            .HasColumnOrder(6);
+
+         
         }
 
         }

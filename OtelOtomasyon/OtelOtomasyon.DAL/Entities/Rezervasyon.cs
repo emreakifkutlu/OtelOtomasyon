@@ -13,7 +13,8 @@ namespace OtelOtomasyon.DAL.Entities
         public DateTime GirisTarihi { get; set; }
         public DateTime CikisTarihi { get; set; }
         public int MusteriId { get; set; }
-        public Boolean? RezerveMi { get; set; }
+        public Boolean RezerveMi { get; set; }
+    
 
         public virtual Oda Odalar { get; set; }
         public virtual Musteri Musteri { get; set; }

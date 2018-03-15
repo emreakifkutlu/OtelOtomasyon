@@ -25,8 +25,9 @@ namespace OtelOtomasyon.DAL.Mappings
 
             Property(x => x.DoluMu)
             .HasColumnType("bit")
-            .IsRequired()            
+            .IsRequired()
             .HasColumnOrder(4);
+
         }
     }
 }
